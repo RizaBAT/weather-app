@@ -6,13 +6,12 @@ export default function Weather() {
   const [search, setSearch] = useState("");
   const [weatherData, setWeatherData] = useState(null);
   const [loading, setLoading] = useState(false);
-  //   const [error, setError] = useState(null);
 
   async function fetchWeatherData(param) {
     setLoading(true);
     try {
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${param}&appid=a51e38433e8d788e42acf33e3945f418`
+        `https://api.openweathermap.org/data/2.5`
       );
       const data = await response.json();
       console.log(data, "data");
